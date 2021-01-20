@@ -17,6 +17,6 @@ Including another URLconf
 from django.urls import include, path
 
 urlpatterns = [
-    path("", include("task.api_for_image_annotation.urls")),
     # path('admin/', admin.site.urls),
+    path("", include("task.api_for_image_annotation.urls")),
 ]

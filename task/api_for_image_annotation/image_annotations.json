@@ -1,0 +1,25 @@
+[
+  {
+    "image": "image1.jpg",
+    "annotations": [
+      {
+        "label": "carrots",
+        "coordinates": {
+          "x": 120,
+          "y": 164,
+          "width": 230,
+          "height": 119
+        }
+      },
+      {
+        "label": "orange",
+        "coordinates": {
+          "x": 230,
+          "y": 321,
+          "width": 50,
+          "height": 50
+        }
+      }
+    ]
+  }
+]

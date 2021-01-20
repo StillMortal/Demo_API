@@ -30,8 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-# https://stackoverflow.com/questions/39098008/django-rest-framework-without-database
-# https://github.com/Dunedan/django-lockdown/issues/10#issuecomment-281812394
+TOKEN = "123"
+
 INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.auth",
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     "task.api_for_image_annotation",
 ]
 
-# https://stackoverflow.com/questions/39098008/django-rest-framework-without-database
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [],
     "DEFAULT_PERMISSION_CLASSES": [],
