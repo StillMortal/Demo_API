@@ -1,5 +1,6 @@
 import json
 import os
+import tempfile
 
 from rest_framework import status
 from rest_framework.parsers import FileUploadParser, MultiPartParser
@@ -22,12 +23,16 @@ class FileUploadView(APIView):
     def post(self, request):
         up_file = request.data["file"]
 
-        with open(
-            os.path.abspath(os.path.dirname(__file__))
-            + "/uploaded_images/"
-            + up_file.name,
-            "wb",
-        ) as destination:
+        # with open(
+        #     os.path.abspath(os.path.dirname(__file__))
+        #     + "/uploaded_images/"
+        #     + up_file.name,
+        #     "wb",
+        # ) as destination:
+        #     for chunk in up_file.chunks():
+        #         destination.write(chunk)
+
+        with tempfile.NamedTemporaryFile() as destination:
             for chunk in up_file.chunks():
                 destination.write(chunk)
 
